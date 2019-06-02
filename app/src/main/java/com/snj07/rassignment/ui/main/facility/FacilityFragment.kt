@@ -5,17 +5,17 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.snj07.rassignment.R
 import com.snj07.rassignment.api.BaseResponse
-import com.snj07.rassignment.databinding.FragmentFilterBinding
+import com.snj07.rassignment.databinding.FragmentFacilityBinding
 import com.snj07.rassignment.db.DetailDB
 import com.snj07.rassignment.model.Option
 import com.snj07.rassignment.repository.FacilityRepository
 import com.snj07.rassignment.ui.base.BaseFragment
 import com.snj07.rassignment.utils.InternetConnectivity
 import io.reactivex.rxkotlin.subscribeBy
-import kotlinx.android.synthetic.main.fragment_filter.*
+import kotlinx.android.synthetic.main.fragment_facility.*
 import javax.inject.Inject
 
-class FacilityFragment : BaseFragment<FragmentFilterBinding, FaciityContract.FacilityViewModel>(),
+class FacilityFragment : BaseFragment<FragmentFacilityBinding, FaciityContract.FacilityViewModel>(),
     FaciityContract.CustomClickListenerInterface {
 
     @Inject
@@ -35,7 +35,7 @@ class FacilityFragment : BaseFragment<FragmentFilterBinding, FaciityContract.Fac
     }
 
 
-    override fun getLayoutRes() = R.layout.fragment_filter
+    override fun getLayoutRes() = R.layout.fragment_facility
     override fun getModelClass() = FaciityContract.FacilityViewModel::class.java
 
 

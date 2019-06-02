@@ -1,6 +1,7 @@
 package com.snj07.rassignment.ui.splash
 
 import android.os.Bundle
+import android.widget.Toast
 import com.firebase.jobdispatcher.*
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
@@ -9,6 +10,7 @@ import com.snj07.rassignment.databinding.ActivitySplashBinding
 import com.snj07.rassignment.service.CustomJobServices
 import com.snj07.rassignment.ui.base.BaseActivity
 import com.snj07.rassignment.utils.Navigator
+import com.snj07.rassignment.utils.extension.toast
 import com.snj07.rassignment.utils.global.Constants
 import io.reactivex.Completable
 import io.reactivex.rxkotlin.subscribeBy
@@ -42,7 +44,6 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, SplashContract.Splash
 
     private fun scheduleJob() {
         if (isGooglePlayServicesAvailable()) {
-            // create a firebase job dispatcher instance
             val dispatcher = FirebaseJobDispatcher(GooglePlayDriver(applicationContext))
 
             val job = dispatcher.newJobBuilder()
@@ -59,6 +60,8 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, SplashContract.Splash
 
             dispatcher.schedule(job)
 
+        } else {
+            toast(getString(R.string.no_play_service), Toast.LENGTH_LONG)
         }
     }
 
@@ -70,7 +73,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, SplashContract.Splash
                 googleApiAvailability.getErrorDialog(this, resultCode, Constants.PLAY_SERVICES_CHECK)
                     .show()
             }
-//            showPSUnavailableMessage()
+
             return false
         }
         return true

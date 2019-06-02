@@ -101,9 +101,6 @@ dependencies {
     androidTestImplementation "androidx.test:runner:$rootProject.runner_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espresso_version"
 
-//    // Butterknife Dependencies
-//    implementation "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
-//    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
 
 
     // Google Flexbox Dependency

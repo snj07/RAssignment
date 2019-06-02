@@ -4,7 +4,7 @@ import android.content.Context
 import android.text.TextUtils
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.snj07.rassignment.databinding.ItemFilterBinding
+import com.snj07.rassignment.databinding.ItemFacilityBinding
 import com.snj07.rassignment.model.Facility
 import com.snj07.rassignment.ui.main.setting.FilterViewHolder
 import com.snj07.rassignment.utils.extension.inflater
@@ -21,7 +21,7 @@ class FacilityRecyclerViewAdapter :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilterViewHolder {
-        return FilterViewHolder(ItemFilterBinding.inflate(parent.inflater(), parent, false))
+        return FilterViewHolder(ItemFacilityBinding.inflate(parent.inflater(), parent, false))
     }
 
     override fun getItemCount(): Int {

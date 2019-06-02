@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white"
+            android:background="@color/colorPrimary"
             android:fitsSystemWindows="true"
             tools:context=".ui.splash.SplashActivity">
 
@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Radius Splash Activity"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/white"
                 android:textSize="@dimen/s20"
                 android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"

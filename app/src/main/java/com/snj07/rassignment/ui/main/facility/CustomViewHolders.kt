@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexWrap
 import com.google.android.flexbox.FlexboxLayoutManager
-import com.snj07.rassignment.databinding.ItemFilterBinding
+import com.snj07.rassignment.databinding.ItemFacilityBinding
 import com.snj07.rassignment.databinding.ItemOptionBinding
 import com.snj07.rassignment.model.Facility
 import com.snj07.rassignment.model.Option
@@ -17,7 +17,7 @@ import com.snj07.rassignment.ui.main.facility.FaciityContract
 import com.snj07.rassignment.ui.main.facility.OptionRecyclerViewAdapter
 import com.snj07.rassignment.views.CustomButton
 
-class FilterViewHolder(private val binding: ItemFilterBinding) : RecyclerView.ViewHolder(binding.root) {
+class FilterViewHolder(private val binding: ItemFacilityBinding) : RecyclerView.ViewHolder(binding.root) {
     lateinit var context: Context
     fun bind(
         item: Facility?,
