@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">RAssignment</string>
     <string name="close">Close</string>
-    <string name="text_empty_view">Empty</string>
+    <string name="text_empty_view">No data</string>
     <string name="try_again">Try Again</string>
     <string name="no_internet_available">No internet</string>
     <string name="no_play_service">PlayService not supported!</string>

@@ -2,6 +2,7 @@ package com.snj07.rassignment.ui.main.facility
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.snj07.rassignment.R
 import com.snj07.rassignment.api.BaseResponse
@@ -11,6 +12,7 @@ import com.snj07.rassignment.model.Option
 import com.snj07.rassignment.repository.FacilityRepository
 import com.snj07.rassignment.ui.base.BaseFragment
 import com.snj07.rassignment.utils.InternetConnectivity
+import com.snj07.rassignment.utils.extension.toast
 import io.reactivex.rxkotlin.subscribeBy
 import kotlinx.android.synthetic.main.fragment_facility.*
 import javax.inject.Inject
@@ -134,6 +136,7 @@ class FacilityFragment : BaseFragment<FragmentFacilityBinding, FaciityContract.F
                             handleExclustionList(this.baseresponse!!)
                             facilityAdapter.updateList(this.baseresponse!!.facilityList)
                             binding.pbVisibility = View.GONE
+                            binding.emptyTV = View.GONE
                         }
 
                     }
@@ -151,6 +154,10 @@ class FacilityFragment : BaseFragment<FragmentFacilityBinding, FaciityContract.F
                         detailDB.insertData(baseResponse = it2)
                     }
                 )
+        }else{
+            context?.applicationContext?.toast(getString(R.string.no_internet_available), Toast.LENGTH_LONG)
+            binding.pbVisibility = View.GONE
+            binding.emptyTV = View.VISIBLE
         }
     }
 
